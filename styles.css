@@ -304,6 +304,12 @@ header {
   z-index: 999;
 }
 
+.carta{
+  width: 80vw;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .lista.active {
   transform: scaleY(1); 
 }
