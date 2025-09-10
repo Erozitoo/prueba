@@ -1,0 +1,233 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  background-color: #e2e5ed;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 40px;
+  position: relative; 
+  gap: 20px;
+}
+
+.menuhamburgesa {
+  margin-left: 20px;
+  display: none!important;
+}
+
+
+.lista {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  
+}
+
+.lista li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.logo-container {
+  position: absolute; 
+  left: 50%;        
+  top: -50px;  
+  transform: translateX(-50%);
+}
+
+.logo {
+  height: 12rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.descuentos {
+  position: relative;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.descuentos .submenu {
+  display: flex;              
+  flex-direction: row;
+  background-color: #e2e5ed;
+  list-style: none;
+  gap: 10px;
+  width: 100%;
+  max-height: 0;             
+  opacity: 0;
+  overflow: hidden;           
+  transition: all 0.8s ease;  
+}
+
+.descuentos:hover .submenu {
+  max-height: 200px;         
+  opacity: 1;
+}
+
+.galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px;
+}
+
+.carta {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carta .imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carta:hover .imagen {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;  
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.carta:hover .overlay {
+  opacity: 1;
+}
+
+.info{
+  margin-top: 15rem;
+  padding: 10px;
+}
+
+.top {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+}
+
+.top:hover{
+  background-color: black;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+.topcontenido{
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+footer {
+  background-color: #e2e5ed;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  header{
+    background-color: #e2e5ed;
+    width: 100%;
+    height: 90px;
+  }
+
+  .menuhamburgesa{
+    margin-left: 40px;
+    display: block !important;
+    font-size: 30px !important;
+
+  }
+
+  .menu {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .lista{
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #e2e5ed;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 1;
+    padding: 20px 0;
+  }
+
+  .lista:hover{
+    background-color: red;
+  }
+
+  .descuentos {
+    flex-direction: column;
+  }
+
+  .descuentos .submenu::after{
+    flex-direction: column;
+    display: block !important;  
+  }
+  
+
+
+  
+
+
+  
+}
+
+
+
